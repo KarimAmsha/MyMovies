@@ -6,6 +6,9 @@ target 'MyMovies' do
   use_frameworks!
 
   # Pods for MyMovies
+  pod "Alamofire"
+  pod 'RxSwift'
+  pod 'Cosmos'
 
   target 'MyMoviesTests' do
     inherit! :search_paths

@@ -1,3 +1,24 @@
-PODFILE CHECKSUM: 09986d795c8d73764b9fa43d4321e44310394d53
+PODS:
+  - Alamofire (5.7.1)
+  - Cosmos (23.0.0)
+  - RxSwift (6.5.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Cosmos
+  - RxSwift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Cosmos
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+
+PODFILE CHECKSUM: 1c5e643b48e286c5c863a98fabf52d030e1013ef
 
 COCOAPODS: 1.12.1
