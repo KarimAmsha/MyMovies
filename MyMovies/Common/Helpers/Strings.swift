@@ -6,3 +6,5 @@
 //
 
 let HomeTitle              = "Popular TV Shows"
+let NOInternetConnection   = "Check your internet connection"
+let MovieDetails           = "Movie Details"

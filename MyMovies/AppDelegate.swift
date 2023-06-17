@@ -11,8 +11,8 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-    private let movieViewModel = MovieViewModel()
+    static let mainSB           = UIStoryboard(name: "Main", bundle: nil)
+    static let movieDetails     = UIStoryboard(name: "MovieDetails", bundle: nil)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

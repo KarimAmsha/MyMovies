@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
     
     func setupUI() {
         setTitle(HomeTitle)
+        hideBackWord()
         loadingIndicatorView.center = view.center
         loadingIndicatorView.tintColor = ColorManager.primary!
         view.addSubview(loadingIndicatorView)
@@ -78,5 +79,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let movie = movies[indexPath.row]
         cell.item = movie
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = movies[indexPath.row]
+        let vc: MovieDetailsViewController = AppDelegate.movieDetails.instanceVC()
+        vc.movie = movie
+        pushNavVC(vc)
     }
 }
