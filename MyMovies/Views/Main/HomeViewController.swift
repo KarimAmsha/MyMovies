@@ -124,4 +124,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         vc.movie = movie // Assign the selected movie object to the `movie` property of the view controller.
         pushNavVC(vc) // Push the `MovieDetailsViewController` onto the navigation stack.
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
+    }
 }
