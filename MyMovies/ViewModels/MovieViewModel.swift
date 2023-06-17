@@ -16,7 +16,6 @@ class MovieViewModel {
 
     func fetchPopularMovies() {
         let popularMoviesEndpoint = APIEndpoint.popularMovies(page: 1)
-        
         apiClient.request(endpoint: popularMoviesEndpoint)
             .map { (response: Movie) -> [MovieResult] in
                 return response.results

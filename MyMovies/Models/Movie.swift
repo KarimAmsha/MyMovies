@@ -47,4 +47,24 @@ struct MovieResult: Codable {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
+    
+    var posterURL: URL? {
+        guard let posterPath = posterPath else {
+            return nil
+        }
+        
+        let baseURL = "https://image.tmdb.org/t/p/"
+        let posterSize = "w500"
+        return URL(string: baseURL + posterSize + posterPath)
+    }
+    
+    var backdropURL: URL? {
+        guard let backdropPath = backdropPath else {
+            return nil
+        }
+        
+        let baseURL = "https://image.tmdb.org/t/p/"
+        let backdropSize = "w1280"
+        return URL(string: baseURL + backdropSize + backdropPath)
+    }
 }

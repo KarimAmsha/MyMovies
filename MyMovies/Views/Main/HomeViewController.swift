@@ -14,38 +14,69 @@ class HomeViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private let movieViewModel = MovieViewModel()
     private var movies: [MovieResult] = []
+    let loadingIndicatorView = LoadingIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+    let activityIndicator = ActivityIndicator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
+        loadPopularMovies()
+        setupMovieDataSubscription()
+    }
+    
+    func setupUI() {
+        setTitle(HomeTitle)
+        loadingIndicatorView.center = view.center
+        loadingIndicatorView.tintColor = ColorManager.primary!
+        view.addSubview(loadingIndicatorView)
+
         tableView.dataSource = self
-        
+        tableView.delegate = self
+        tableView.registerCell(id: MovieCell.self)
+        tableView.tableFooterView = UIView()
+        tableView.separatorStyle = .none
+    }
+    
+    func loadPopularMovies() {
         movieViewModel.fetchPopularMovies()
-        
+    }
+    
+    private func setupMovieDataSubscription() {
         movieViewModel.movies
+            .observe(on: MainScheduler.instance)
+            .do(onNext: { [weak self] _ in
+                DispatchQueue.main.async {
+                    self?.loadingIndicatorView.stopAnimation()
+                }
+            }, onError: { [weak self] _ in
+                DispatchQueue.main.async {
+                    self?.loadingIndicatorView.stopAnimation()
+                }
+            }, onSubscribe: { [weak self] in
+                DispatchQueue.main.async {
+                    self?.loadingIndicatorView.startAnimation()
+                }
+            })
             .subscribe(onNext: { [weak self] movieResults in
                 self?.movies = movieResults
                 self?.tableView.reloadData()
             }, onError: { error in
                 // Handle the error
-                print(error)
+                self.showError(error.localizedDescription)
             })
             .disposed(by: disposeBag)
     }
 }
 
-extension HomeViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath)
+        let cell: MovieCell = tableView.dequeueTVCell()
         let movie = movies[indexPath.row]
-        // Configure the cell with the movie data
-        cell.textLabel?.text = movie.name
-        cell.detailTextLabel?.text = movie.overview
+        cell.item = movie
         return cell
     }
 }
-

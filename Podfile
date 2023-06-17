@@ -9,6 +9,8 @@ target 'MyMovies' do
   pod "Alamofire"
   pod 'RxSwift'
   pod 'Cosmos'
+  pod 'SDWebImage'
+  pod 'SwiftMessages'
 
   target 'MyMoviesTests' do
     inherit! :search_paths
