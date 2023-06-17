@@ -38,13 +38,13 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9y-Qc-uyd">
-                                <rect key="frame" x="120" y="20" width="253" height="21"/>
+                                <rect key="frame" x="120" y="40" width="253" height="21"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins Medium" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTh-Nc-Sap" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="120" y="53" width="253" height="30"/>
+                                <rect key="frame" x="120" y="69" width="253" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="oBt-hW-x53"/>
@@ -55,8 +55,8 @@
                         <constraints>
                             <constraint firstItem="qTh-Nc-Sap" firstAttribute="leading" secondItem="NEm-jc-mYZ" secondAttribute="trailing" constant="20" id="4Yh-BM-BuN"/>
                             <constraint firstItem="f9y-Qc-uyd" firstAttribute="leading" secondItem="NEm-jc-mYZ" secondAttribute="trailing" constant="20" id="FL2-lY-Rog"/>
-                            <constraint firstItem="f9y-Qc-uyd" firstAttribute="top" secondItem="4wX-UZ-hj0" secondAttribute="top" constant="20" id="RzI-Js-s9c"/>
-                            <constraint firstItem="qTh-Nc-Sap" firstAttribute="top" secondItem="f9y-Qc-uyd" secondAttribute="bottom" constant="12" id="WEy-Oc-V9Z"/>
+                            <constraint firstItem="f9y-Qc-uyd" firstAttribute="top" secondItem="4wX-UZ-hj0" secondAttribute="top" constant="40" id="RzI-Js-s9c"/>
+                            <constraint firstItem="qTh-Nc-Sap" firstAttribute="top" secondItem="f9y-Qc-uyd" secondAttribute="bottom" constant="8" id="WEy-Oc-V9Z"/>
                             <constraint firstItem="NEm-jc-mYZ" firstAttribute="leading" secondItem="4wX-UZ-hj0" secondAttribute="leading" constant="20" id="XFf-nn-MQS"/>
                             <constraint firstItem="NEm-jc-mYZ" firstAttribute="centerY" secondItem="4wX-UZ-hj0" secondAttribute="centerY" id="rVM-GR-kcB"/>
                             <constraint firstAttribute="trailing" secondItem="f9y-Qc-uyd" secondAttribute="trailing" constant="20" id="ubS-7T-xql"/>
