@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Movie Model
 struct Movie: Codable {
     let page: Int
     let results: [MovieResult]
@@ -55,6 +56,7 @@ struct MovieResult: Codable {
         
         let baseURL = "https://image.tmdb.org/t/p/"
         let posterSize = "w500"
+        // Construct the full URL using the base URL, poster size, and poster path
         return URL(string: baseURL + posterSize + posterPath)
     }
     
@@ -65,6 +67,7 @@ struct MovieResult: Codable {
         
         let baseURL = "https://image.tmdb.org/t/p/"
         let backdropSize = "w1280"
+        // Construct the full URL using the base URL, backdrop size, and backdrop path
         return URL(string: baseURL + backdropSize + backdropPath)
     }
 }

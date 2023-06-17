@@ -22,16 +22,21 @@ class MovieDetailsViewController: UIViewController {
         setMovieInfoDetails()
     }
     
-    func setupUI() {
+    private func setupUI() {
+        // Set the view controller's title
         setTitle(MovieDetails)
     }
     
-    func setMovieInfoDetails() {
+    /// Fetches movie details and updates the UI.
+    private func setMovieInfoDetails() {
+        // Check if the movie property is set
         if let movie = movie {
-            moviePoster.fetchImage(movie.posterURL)
-            lblTitle.text = movie.name
-            rateView.rating = movie.voteAverage
-            lblDescription.text = movie.overview
+            moviePoster.fetchImage(movie.posterURL) // Fetch and set the movie poster image from URL
+            lblTitle.text = movie.name              // Set the movie title
+            rateView.rating = movie.voteAverage     // Set the movie rating
+            lblDescription.text = movie.overview    // Set the movie description
         }
     }
 }
+
+

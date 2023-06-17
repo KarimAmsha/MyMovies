@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// An enumeration representing various font types of the Poppins font family.
 enum fontType: String {
     case light           = "Poppins-Light"
     case regular         = "Poppins-Regular"

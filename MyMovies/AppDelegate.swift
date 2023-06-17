@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static let movieDetails     = UIStoryboard(name: "MovieDetails", bundle: nil)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // UINavigationBar Appearance.
         UINavigationBar.setupAppearance()
 
         return true

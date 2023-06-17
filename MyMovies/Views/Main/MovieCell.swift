@@ -14,11 +14,10 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var lblMovieTitle: UILabel!
     @IBOutlet weak var rateView: CosmosView!
     
-    var item: MovieResult? {didSet{setData()}}
+    var item: MovieResult? {didSet{setData()}} // Update the cell's UI whenever the `item` is set.
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         selectionStyle = .none
     }
 
@@ -29,11 +28,14 @@ class MovieCell: UITableViewCell {
     }
 
     func setData() {
+        // Check if the `item` property is not `nil`.
         if let item = item {
-            poster.fetchImage(item.posterURL)
-            lblMovieTitle.text = item.name
-            rateView.isUserInteractionEnabled = false
-            rateView.rating = item.voteAverage
+            poster.fetchImage(item.posterURL)           // Fetch and display the movie poster image.
+            lblMovieTitle.text = item.name              // Set the movie title label text.
+            rateView.isUserInteractionEnabled = false   // Disable user interaction for the rating view.
+            rateView.rating = item.voteAverage          // Set the rating view's value.
         }
     }
 }
+
+

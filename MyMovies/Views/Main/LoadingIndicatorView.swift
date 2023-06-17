@@ -7,9 +7,10 @@
 
 import UIKit
 
+/// The LoadingIndicatorView UIView
 class LoadingIndicatorView: UIView {
     private let circleLayer = CAShapeLayer()
-    private let colors: [UIColor] = [.green, .gray]
+    private let colors: [UIColor] = [ColorManager.primary!, .gray]
     private let lineWidth: CGFloat = 4.0
     
     override init(frame: CGRect) {

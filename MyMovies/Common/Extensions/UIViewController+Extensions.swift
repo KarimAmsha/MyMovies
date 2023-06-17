@@ -62,7 +62,7 @@ extension UIViewController {
     }
     
     func showAlertNoInternt() {
-        showError(NOInternetConnection)
+        showError(NoInternetConnection)
     }
     
     func isConnectedToNetwork() -> Bool {

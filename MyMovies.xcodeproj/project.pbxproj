@@ -10,7 +10,6 @@
 		1E08C0302A3DEBAB00E9E000 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08C02F2A3DEBAB00E9E000 /* UIStoryboard+Extensions.swift */; };
 		1E08C0322A3DED5C00E9E000 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08C0312A3DED5C00E9E000 /* MovieDetailsViewController.swift */; };
 		1E08C0342A3DEDE000E9E000 /* UINavigationItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08C0332A3DEDDF00E9E000 /* UINavigationItem+Extensions.swift */; };
-		1E38D8EF2A3D11F700F26374 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38D8EE2A3D11F700F26374 /* APIError.swift */; };
 		1E38D8F62A3D27D600F26374 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E38D8F52A3D27D600F26374 /* MovieCell.xib */; };
 		1E38D8F82A3D2B0300F26374 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38D8F72A3D2B0300F26374 /* MovieCell.swift */; };
 		1E38D8FA2A3D2BE700F26374 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38D8F92A3D2BE700F26374 /* UITableView+Extensions.swift */; };
@@ -25,7 +24,6 @@
 		1E38D90D2A3D364D00F26374 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38D90C2A3D364D00F26374 /* ColorManager.swift */; };
 		1E38D9102A3D368A00F26374 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E38D90F2A3D368A00F26374 /* Colors.xcassets */; };
 		1E38D9122A3D388600F26374 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38D9112A3D388600F26374 /* UIImageView+Extensions.swift */; };
-		1E38D9142A3D3D0E00F26374 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38D9132A3D3D0E00F26374 /* ActivityIndicator.swift */; };
 		1E38D9162A3D410400F26374 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38D9152A3D410400F26374 /* LoadingIndicatorView.swift */; };
 		1E38D9182A3D441700F26374 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38D9172A3D441700F26374 /* UIViewController+Extensions.swift */; };
 		1E38D91A2A3D450D00F26374 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38D9192A3D450D00F26374 /* Strings.swift */; };
@@ -72,7 +70,6 @@
 		1E08C02F2A3DEBAB00E9E000 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		1E08C0312A3DED5C00E9E000 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		1E08C0332A3DEDDF00E9E000 /* UINavigationItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extensions.swift"; sourceTree = "<group>"; };
-		1E38D8EE2A3D11F700F26374 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		1E38D8F52A3D27D600F26374 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		1E38D8F72A3D2B0300F26374 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		1E38D8F92A3D2BE700F26374 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
@@ -87,7 +84,6 @@
 		1E38D90C2A3D364D00F26374 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		1E38D90F2A3D368A00F26374 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		1E38D9112A3D388600F26374 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
-		1E38D9132A3D3D0E00F26374 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		1E38D9152A3D410400F26374 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		1E38D9172A3D441700F26374 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		1E38D9192A3D450D00F26374 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -245,7 +241,6 @@
 			children = (
 				1E579FB52A3CB07B004851A9 /* APIEndpoint.swift */,
 				1E579FB72A3CB089004851A9 /* APIClient.swift */,
-				1E38D8EE2A3D11F700F26374 /* APIError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -280,7 +275,6 @@
 				1E38D9082A3D33C400F26374 /* Enums.swift */,
 				1E38D90A2A3D33F500F26374 /* Utilities.swift */,
 				1E38D90C2A3D364D00F26374 /* ColorManager.swift */,
-				1E38D9132A3D3D0E00F26374 /* ActivityIndicator.swift */,
 				1E38D9192A3D450D00F26374 /* Strings.swift */,
 			);
 			path = Helpers;
@@ -595,7 +589,6 @@
 			files = (
 				1E579F682A3CA31F004851A9 /* AppDelegate.swift in Sources */,
 				1E38D8FA2A3D2BE700F26374 /* UITableView+Extensions.swift in Sources */,
-				1E38D9142A3D3D0E00F26374 /* ActivityIndicator.swift in Sources */,
 				1E579FB42A3CAB4F004851A9 /* MovieViewModel.swift in Sources */,
 				1E38D9092A3D33C400F26374 /* Enums.swift in Sources */,
 				1E38D90B2A3D33F500F26374 /* Utilities.swift in Sources */,
@@ -616,7 +609,6 @@
 				1E579F6A2A3CA31F004851A9 /* SceneDelegate.swift in Sources */,
 				1E579FB62A3CB07B004851A9 /* APIEndpoint.swift in Sources */,
 				1E579FC02A3CB677004851A9 /* Constants.swift in Sources */,
-				1E38D8EF2A3D11F700F26374 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

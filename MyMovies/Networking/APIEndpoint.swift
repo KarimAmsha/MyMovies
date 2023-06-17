@@ -8,46 +8,47 @@
 import Alamofire
 
 enum APIEndpoint {
-    case popularMovies(page: Int)
-    case movieDetails(movieId: Int)
+    case popularMovies(page: Int) // Represents the popular movies API endpoint. The page number of the results to fetch.
+
 
     var path: String {
         switch self {
+        // case for the popular movies endpoint with a specified page number
         case .popularMovies(let page):
+            // returns the corresponding API path for popular movies with the specified page number
             return "/tv/popular?language=en-US&page=\(page)"
-        case .movieDetails(let movieId):
-            return "/movies/\(movieId)"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .popularMovies, .movieDetails:
+        case .popularMovies:
+            // For fetching popular movies, use the 'get' HTTP method.
             return .get
         }
     }
     
+    /// This computed property returns an optional dictionary of type Parameters.
+    /// The purpose of the property is to store any specific parameters that a given API case may require.
     var parameters: Parameters? {
         switch self {
-        case .popularMovies, .movieDetails:
+        // In case of the popularMovies API, no additional parameters are required, so it returns nil.
+        case .popularMovies:
             return nil
         }
     }
     
+    /// This property returns the appropriate HTTP headers for the specific API case.
     var headers: HTTPHeaders? {
         switch self {
-        case .popularMovies, .movieDetails:
+        // For the "popularMovies" case, create and return the appropriate headers
+        case .popularMovies:
             return [
+                // Indicate that the response should be in JSON format
                 "accept": "application/json",
+                // Include the Bearer token from Constants for authorization
                 "Authorization": "Bearer \(Constants.accessToken)"
             ]
-        }
-    }
-    
-    var body: Data? {
-        switch self {
-        case .popularMovies, .movieDetails:
-            return nil
         }
     }
 }
